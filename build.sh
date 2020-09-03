@@ -49,8 +49,9 @@ ls -a
 rm -rf ~/MI9_Anykernel3_Nethunter/Image*
 rm -rf ~/MI9_Anykernel3_Nethunter/dtbo.img
 #rm -rf ~/out_kernel_asop/nethunter*
-cp -a ~/Quantic-Kernel-AOSP-Cepheus/out-clang/arch/arm64/boot/Image.gz-dtb ~/nethunter/MI9_Anykernel3_Nethunter
+cp -a ~/Quantic-Kernel-AOSP-Cepheus/out-clang/arch/arm64/boot/Image.gz-dtb ~/build_mi9_kernel/Quantic-Kernel-Illusion/
 
-cd ~/MI9_Anykernel3_Nethunter
+cd ~/build_mi9_kernel/Quantic-Kernel-Illusion/
+mkdir -p release
 rm release/*.zip 2>/dev/null
-zip -r9 release/nethunter_asop_kernel.zip * -x .git README.md *placeholder release/
+zip -r9 release/cepheus_asop_kernel.zip * -x .git README.md *placeholder release/
